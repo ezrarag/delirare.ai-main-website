@@ -24,11 +24,11 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://delirare.ai'),
+  metadataBase: new URL('https://ai-main-website.vercel.app'),
   openGraph: {
     title: 'Delirare™ - We make AI voices human',
     description: 'In the era of AI, a brand\'s voice is as valuable as its logo. We partner with world-class teams to craft voices that define products, inspire trust, and leave a legacy.',
-    url: 'https://delirare.ai',
+    url: 'https://ai-main-website.vercel.app',
     siteName: 'Delirare',
     images: [
       {
