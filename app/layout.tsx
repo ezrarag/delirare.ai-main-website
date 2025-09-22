@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
-import './globals.css';
+// import './globals.css';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -66,12 +66,30 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-      </head>
-      <body className={`${inter.className} antialiased`}>
+    <html lang="en" className={`${inter.variable} ${playfair.variable}`} style={{ margin: 0, padding: 0 }}>
+          <head>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yu+Gothic+Pr6N+M:wght@300;400;500;700&display=swap" />
+            <style dangerouslySetInnerHTML={{
+              __html: `
+                * {
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  border: none !important;
+                  outline: none !important;
+                }
+                html, body {
+                  margin: 0 !important;
+                  padding: 0 !important;
+                  border: none !important;
+                  outline: none !important;
+                  overflow-x: hidden !important;
+                }
+              `
+            }} />
+          </head>
+      <body className={`${inter.className} antialiased`} style={{ margin: 0, padding: 0, overflow: 'hidden' }}>
         {children}
       </body>
     </html>

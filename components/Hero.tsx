@@ -55,6 +55,17 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
+      {/* Background image */}
+      <div className="absolute inset-0">
+        <div 
+          className="w-full h-full bg-cover bg-center bg-no-repeat opacity-20"
+          style={{
+            backgroundImage: "url('/hero-background.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <motion.div
